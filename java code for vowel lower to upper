@@ -1,0 +1,61 @@
+package animalTime;
+import java.util.*;
+import java.io.*;
+
+public class readfile {
+	private Scanner x;
+	public void openFile(String input){
+		
+		try{
+			x = new Scanner(new File(input));
+		}catch(Exception e){
+			System.out.println("no such file");
+		}
+	}
+	public void readFile(){
+		
+		//String line= x.nextLine();
+		String read = x.next();
+			
+		while(x.hasNext()){
+			
+			for(int i=0;i<read.length();i++){
+				
+			if(read.charAt(i)==('a')){	
+			 System.out.print("A");	
+			}else if(read.charAt(i)==('e')){
+			 System.out.print("E");	
+			}else if(read.charAt(i)==('i')){
+				 System.out.print("I");	
+				}else if(read.charAt(i)==('o')){
+					 System.out.print("O");	
+				}else if(read.charAt(i)==('u')){
+					 System.out.print("U");	
+				}else
+			 System.out.print(read.charAt(i));	
+			
+			
+		}
+			System.out.print(" ");	
+			read = x.next();
+			
+			}
+		
+		//	String string  = x.nextLine();
+		//	read=x.next();
+			
+	}
+	
+	
+	
+	public void closeFile(){
+		x.close();
+	}
+/*	
+public char ch(String rd, int i){
+	
+	char a = rd.charAt(i);
+	
+	return a;
+}*/
+}
